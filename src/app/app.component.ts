@@ -1,15 +1,27 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from "@angular/forms";
 
 @Component({
   selector: 'app-root',
-  styleUrl: './app.component.scss',
+  styleUrls: ['./app.component.scss'],
   template: `
-    <div>
-
-    </div>
+<form [formGroup]="form">
+  <input type="text" formControlName="first">
+  <input type="text" formControlName="last">
+  <input type="email" formControlName="mail">
+</form>
   `
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  form
+
+  ngOnInit() {
+    this.form = new FormGroup({
+      first: new FormControl('ss'),
+      last: new FormControl('dd'),
+      mail: new FormControl('ff')
+    })
+  }
 
 }
 
