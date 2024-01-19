@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-demo',
-  styleUrl: './demo.component.scss',
+  selector: 'app-new',
+  styleUrl: './new.component.scss',
   template: `
-    <h1>demio</h1> 
+    <h1>new</h1> 
     <br>
     <br>
     <br>
     <br>
     <a [routerLink]="['']">app</a>
-  `
+  `,
 })
-export class DemoComponent {
+export class NewComponent {
 
 }
