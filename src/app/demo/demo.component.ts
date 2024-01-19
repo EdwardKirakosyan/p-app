@@ -1,23 +1,14 @@
-import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-demo',
-  templateUrl: './demo.component.html',
-  styleUrl: './demo.component.scss'
+  styleUrl: './demo.component.scss',
+  template: `
+    <div>
+      
+    </div>
+  `
 })
-export class DemoComponent implements OnChanges {
-  title: string = 'Demo comp'
-  @Input() message: string;
+export class DemoComponent {
 
-  constructor() {
-    console.log('demo constractor called')
-    console.log(this.title)
-    console.log(this.message)
-  }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log('ngOnCHanges Called!!!!')
-    console.log(changes)
-
-  }
 }
